@@ -1,4 +1,5 @@
 import 'package:first_app/botom_bar.dart';
+import 'package:first_app/uitles/app_style.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,14 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return     MaterialApp(
+    return MaterialApp(
       title: "2nd try",
-      theme: ThemeData( primarySwatch: Colors.blue),
+      theme: ThemeData(primaryColor: primary),
       home: const BottomBar(),
     );
   }
 }
-
-
-
-
