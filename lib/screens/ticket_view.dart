@@ -25,7 +25,6 @@ class TicketView extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(21),
                       topRight: Radius.circular(21))),
-              color: Colors.red,
               padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
@@ -33,12 +32,14 @@ class TicketView extends StatelessWidget {
                     children: [
                       Text(
                         "KHI",
-                        style: Styles.headLinestyle3,
+                        style:
+                            Styles.headLinestyle3.copyWith(color: Colors.white),
                       ),
                       const Spacer(),
                       Text(
                         "ISL",
-                        style: Styles.headLinestyle3,
+                        style:
+                            Styles.headLinestyle3.copyWith(color: Colors.white),
                       )
                     ],
                   )
