@@ -1,6 +1,8 @@
 import 'package:first_app/screens/hotel_screeen.dart';
 import 'package:first_app/screens/ticket_view.dart';
 import 'package:first_app/uitles/app_style.dart';
+import 'package:first_app/uitles/list_tikcet_map.dart';
+import 'package:first_app/uitles/map_info_list.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -90,11 +92,9 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20),
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: const [
-                TicketView(),
-                TicketView(),
-              ],
-            ),
+                children: ticketList
+                    .map((singelTicket) => TicketView(ticket: singelTicket))
+                    .toList()),
           ),
           const Gap(15),
           Container(
@@ -122,13 +122,9 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20),
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: const [
-                HOtelScreen(),
-                HOtelScreen(),
-                HOtelScreen(),
-                HOtelScreen(),
-              ],
-            ),
+                children: hotelList
+                    .map((singelHotel) => HotelScreen(hotel: singelHotel))
+                    .toList()),
           ),
         ],
       ),

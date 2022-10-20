@@ -3,11 +3,13 @@ import 'package:first_app/uitles/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class HOtelScreen extends StatelessWidget {
-  const HOtelScreen({super.key});
+class HotelScreen extends StatelessWidget {
+  final Map<String, dynamic> hotel;
+  const HotelScreen({super.key, required this.hotel});
 
   @override
   Widget build(BuildContext context) {
+    print("the price is ${hotel["price"]}");
     final size = AppLayout.getSize(context);
     return Container(
       margin: const EdgeInsets.only(right: 17, top: 5),
@@ -28,25 +30,25 @@ class HOtelScreen extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             color: Styles.primaryColor,
-            image: const DecorationImage(
+            image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage('assets/images/hotel1.jpg'),
+              image: AssetImage('assets/images/${hotel["image"]}'),
             ),
           ),
         ),
         const Gap(10),
         Text(
-          "Open space",
+          hotel["place"],
           style: Styles.headLinestyle2.copyWith(color: Styles.kakiColor),
         ),
         const Gap(5),
         Text(
-          "London",
+          hotel["destination"],
           style: Styles.headLinestyle3.copyWith(color: Colors.white),
         ),
         const Gap(8),
         Text(
-          "\$40/might",
+          "\$${hotel["price"]}/night",
           style: Styles.headLinestyle1.copyWith(color: Styles.kakiColor),
         ),
       ]),
