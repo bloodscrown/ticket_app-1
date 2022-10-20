@@ -1,3 +1,4 @@
+import 'package:first_app/screens/hotel_screeen.dart';
 import 'package:first_app/screens/ticket_view.dart';
 import 'package:first_app/uitles/app_style.dart';
 import 'package:flutter/material.dart';
@@ -80,12 +81,55 @@ class HomeScreen extends StatelessWidget {
                       ),
                     )
                   ],
-                )
+                ),
               ],
             ),
           ),
           const Gap(15),
-          const TicketView(),
+          SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 20),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: const [
+                TicketView(),
+                TicketView(),
+              ],
+            ),
+          ),
+          const Gap(15),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Hotels",
+                  style: Styles.headLinestyle2,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "view all",
+                    style:
+                        Styles.textStyle.copyWith(color: Styles.primaryColor),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Gap(15),
+          SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 20),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: const [
+                HOtelScreen(),
+                HOtelScreen(),
+                HOtelScreen(),
+                HOtelScreen(),
+              ],
+            ),
+          ),
         ],
       ),
     );
