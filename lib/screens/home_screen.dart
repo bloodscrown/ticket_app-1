@@ -3,6 +3,7 @@ import 'package:first_app/screens/ticket_view.dart';
 import 'package:first_app/uitles/app_style.dart';
 import 'package:first_app/uitles/list_tikcet_map.dart';
 import 'package:first_app/uitles/map_info_list.dart';
+import 'package:first_app/widgets/doubel_text-widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -67,23 +68,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcoing Flights",
-                      style: Styles.headLinestyle2,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Text(
-                        "view all",
-                        style: Styles.textStyle
-                            .copyWith(color: Styles.primaryColor),
-                      ),
-                    )
-                  ],
-                ),
+                const DoubelText(bigText: "Upcoming Flight", smallText: "View all")
               ],
             ),
           ),
@@ -98,25 +83,11 @@ class HomeScreen extends StatelessWidget {
           ),
           const Gap(15),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: Styles.headLinestyle2,
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Text(
-                    "view all",
-                    style:
-                        Styles.textStyle.copyWith(color: Styles.primaryColor),
-                  ),
-                ),
-              ],
-            ),
-          ),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: const DoubelText(
+                bigText: "Hotels",
+                smallText: "view all",
+              )),
           const Gap(15),
           SingleChildScrollView(
             padding: const EdgeInsets.only(left: 20),

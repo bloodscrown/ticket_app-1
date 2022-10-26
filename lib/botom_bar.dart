@@ -1,4 +1,5 @@
 import 'package:first_app/screens/home_screen.dart';
+import 'package:first_app/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -15,7 +16,7 @@ class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text("Search"),
+    const SearchSceen(),
     const Text("Ticket"),
     const Text("Profile"),
   ];

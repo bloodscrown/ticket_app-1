@@ -9,7 +9,6 @@ class HotelScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("the price is ${hotel["price"]}");
     final size = AppLayout.getSize(context);
     return Container(
       margin: const EdgeInsets.only(right: 17, top: 5),
