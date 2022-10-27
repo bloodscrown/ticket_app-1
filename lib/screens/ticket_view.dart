@@ -1,6 +1,6 @@
 import 'package:first_app/uitles/app_layout.dart';
 import 'package:first_app/uitles/app_style.dart';
-import 'package:first_app/uitles/tick_contanier.dart';
+import 'package:first_app/widgets/tick_contanier.dart';
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -13,23 +13,23 @@ class TicketView extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return SizedBox(
-      width: size.width * 0.97,
-      height: 200,
+      width: size.width * .97,
+      height: AppLayout.getHeight(200),
       /*
       
       this contanaier showing blue part of ticket.
 
       */
       child: Container(
-        padding: const EdgeInsets.only(right: 16),
+        padding: EdgeInsets.only(right: AppLayout.getWidth(16)),
         child: Column(
           children: [
             Container(
               decoration: BoxDecoration(
                   color: Styles.blueColor,
-                  borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(21),
-                      topRight: Radius.circular(21))),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(AppLayout.getHeight(21)),
+                      topRight: Radius.circular(AppLayout.getHeight(21)))),
               padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
@@ -114,7 +114,7 @@ class TicketView extends StatelessWidget {
                         width: 100,
                         child: Text(
                           ticket["flying_time"],
-                          // textAlign: TextAlign.center,
+                          textAlign: TextAlign.center,
                           style: Styles.headLinestyle4
                               .copyWith(color: Colors.white),
                         ),
