@@ -48,8 +48,8 @@ class TicketView extends StatelessWidget {
                       Expanded(
                         child: Container(),
                       ),
-                      const ThickContanier(
-                        isColor: true,
+                      ThickContanier(
+                        isColor: isColor,
                       ),
                       Expanded(
                         child: Stack(
@@ -71,8 +71,8 @@ class TicketView extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const ThickContanier(
-                        isColor: true,
+                      ThickContanier(
+                        isColor: isColor,
                       ),
                       Expanded(
                         child: Container(),
@@ -186,19 +186,19 @@ class TicketView extends StatelessWidget {
                         bigText: ticket["date"],
                         smText: "Date",
                         alignment: CrossAxisAlignment.start,
-                        isColor: false,
+                        isColor: isColor,
                       ),
                       AppLayotColumn(
                         bigText: ticket["departure_time"],
                         smText: "Depurture Time",
                         alignment: CrossAxisAlignment.center,
-                        isColor: false,
+                        isColor: isColor,
                       ),
                       AppLayotColumn(
                         bigText: ticket["number"].toString(),
                         smText: "Number",
                         alignment: CrossAxisAlignment.end,
-                        isColor: true,
+                        isColor: isColor,
                       ),
                     ],
                   )
