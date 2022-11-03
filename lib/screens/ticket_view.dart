@@ -29,7 +29,8 @@ class TicketView extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                  color: isColor == null ? Color(0xFF526799) : Colors.white,
+                  color:
+                      isColor == null ? const Color(0xFF526799) : Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(AppLayout.getHeight(21)),
                       topRight: Radius.circular(AppLayout.getHeight(21)))),
@@ -54,7 +55,7 @@ class TicketView extends StatelessWidget {
                       Expanded(
                         child: Stack(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                                 height: 24,
                                 child: MyLayoutbuilder(
                                   section: 6,
@@ -65,7 +66,7 @@ class TicketView extends StatelessWidget {
                                 child: Icon(Icons.local_airport_rounded,
                                     color: isColor == null
                                         ? Colors.white
-                                        : Color(0XFF8ACCF7)),
+                                        : const Color(0XFF8ACCF7)),
                               ),
                             ),
                           ],
@@ -136,8 +137,8 @@ class TicketView extends StatelessWidget {
             Container(
               color: isColor == null ? Styles.orangeColor : Colors.white,
               child: Row(
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     height: 20,
                     width: 10,
                     child: DecoratedBox(
@@ -149,11 +150,11 @@ class TicketView extends StatelessWidget {
                   ),
                   Expanded(
                       child: Padding(
-                          padding: const EdgeInsets.all(12.0),
+                          padding: EdgeInsets.all(12.0),
                           child: MyLayoutbuilder(
                             section: 15,
                           ))),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                     width: 10,
                     child: DecoratedBox(
