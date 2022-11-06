@@ -24,10 +24,6 @@ class AppLayotColumn extends StatelessWidget {
       crossAxisAlignment: alignment,
       children: [
         Text(
-          /*style: isColor == null
-                                ? Styles.headLinestyle4
-                                    .copyWith(color: Colors.white)
-                                : Styles.headLinestyle3, */
           bigText,
           style: isColor == null
               ? Styles.headLinestyle3.copyWith(

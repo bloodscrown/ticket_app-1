@@ -46,7 +46,8 @@ class HomeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage("assets/images/male_avt.png"))),
+                              image:
+                                  AssetImage("assets/images/love_react.png"))),
                     )
                   ],
                 ),
@@ -68,7 +69,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(40),
-                const DoubelText(bigText: "Upcoming Flight", smallText: "View all")
+                const DoubelText(
+                    bigText: "Upcoming Flight", smallText: "View all")
               ],
             ),
           ),
